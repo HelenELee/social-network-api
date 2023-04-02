@@ -88,6 +88,7 @@ Reaction routes follow the below format:
 ```
 
 Below is a sample of the date retrieved for a user. Note the thoughts, reactions, reactionCount, friends and friendCount:
+
 ![Here is a screenshot showing the home page.](/images/user.png)
 
 
