@@ -1,0 +1,29 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "A social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelenELee/social-network-api.git"
+  },
+  "keywords": [
+    "social",
+    "network",
+    "api"
+  ],
+  "author": "Helen Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HelenELee/social-network-api/issues"
+  },
+  "homepage": "https://github.com/HelenELee/social-network-api#readme",
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3"
+  }
+}
