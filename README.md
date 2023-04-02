@@ -24,7 +24,6 @@
   - MongoDB
   - Express.js
   - Date-fns
-  - Handlebars
 
   The main challenge in developing this application was getting all the routes developed correctly and in the correct file structure using part of the MVC pattern. 
 
