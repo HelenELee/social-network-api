@@ -86,12 +86,22 @@ Reaction routes follow the below format:
 ```
 /api/thoughts/:thoughtId/reactions
 ```
+Add the reactionId as follows:
+```
+{
+  "reactionId": "642a974f53d84c4c07104448"
+}
+```
 
 Below is a sample of the date retrieved for a user. Note the thoughts, reactions, reactionCount, friends and friendCount:
 
 ![Here is a screenshot showing the home page.](/images/user.png)
 
+To watch a video of the API in operation in Insomnia click the link below:
 
+https://drive.google.com/file/d/1Ljf1tKexLhpaagBL5AZkhChL8RFr9PXm/view
+
+ 
   ## License
   This project is covered by the "The MIT License" license.
   For more details click on the link below:
