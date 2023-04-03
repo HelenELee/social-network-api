@@ -1,3 +1,4 @@
+//setup connection for mongodb
 const { connect, connection } = require('mongoose');
 
 connect('mongodb://localhost/socialNetworkAPI', {
