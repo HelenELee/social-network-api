@@ -2,13 +2,6 @@ const { Schema, Types } = require('mongoose');
 //import functions from date-fns to format dates
 const { format } = require('date-fns');
 const { enAULocale } = require('date-fns/locale/en-AU');
-//const { formatDate } = require('../utils/helper.js');
-//console.log(format(new Date(), "dd/MM/yyyy", { locale: en-AU }));
-/*
-function formatDate(date) {
-    return format(date, "MMM do, yyyy hh:mm aaaa", { locale: enAULocale })
-}
-*/
 
 const reactionSchema = new Schema(
     {
@@ -28,19 +21,16 @@ const reactionSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            //get: formatDate, //convert date to specified format
+            //convert date to specified format
             get: ((date) => format(date, "PPPp", { locale: enAULocale }))
         },
     },
     {
         toJSON: {
-          getters: true,
+          getters: true, //ensure get (of date) is applied
         },
         id: false,
       }
 )
-
-// Initialize our Thought model
-//const Reaction = model('reaction', reactionSchema);
 
 module.exports = reactionSchema;

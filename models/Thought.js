@@ -4,14 +4,6 @@ const { format } = require('date-fns');
 const { enAULocale } = require('date-fns/locale/en-AU');
 const reactionSchema = require('./Reaction');
 
-/*
-//console.log(format(new Date(), "dd/MM/yyyy", { locale: en-AU }));
-function formatDate(date) {
-  //MMM do, yyyy hh:mm aaaa
-  //dd/MM/yyyy
-    return format(date, "dd/MM/yyyyMMM do, yyyy hh:mm aaaa", { locale: enAULocale })
-}*/
-
 // Schema to create Thought model
 const thoughtSchema = new Schema(
     {
@@ -23,16 +15,15 @@ const thoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            //get: formatDate, //convert date to specified format
-            // PPPp
-            //"MMM do, yyyy hh:mm aaaa"
+            //convert date to specified format
+            // gives format - April 3rd, 2023 at 9:21 PM
             get: ((date) => format(date, "PPPp", { locale: enAULocale }))
         },
         username: {
             type: String,
             required: true,
         },
-        reactions: [reactionSchema],
+        reactions: [reactionSchema], //array of reactios
     },
     {
         toJSON: {
@@ -48,7 +39,6 @@ thoughtSchema
   // Getter
   .get(function () {
     return this.reactions.length;
-    //return `${this.reactions.lenght}`;
   })
 
 // Initialize our Thought model
