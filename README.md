@@ -25,7 +25,7 @@
   - Express.js
   - Date-fns
 
-  The main challenge in developing this application was getting all the routes developed correctly and in the correct file structure using part of the MVC pattern. 
+  The main challenge in developing this application was getting all the routes developed correctly ensuring CRUD actions updated all data correctly and associated data eg delete User then also delete Thoughts belonging to that User.
 
 
   ## Installation
